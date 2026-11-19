@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* =>브라우저가 기본적으로 가지고 있는 값을 초기화함  */
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.header{
+    height: 80px;
+    background-color: lightgray;
+    padding: 0 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+.menu_wrap{
+    width: 460px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mo_menu{
+    font-size: 30px;
+    display: none;
+    /* =>화면에 보이지 않게 함 */
+}
+
+@media screen and (max-width:1024px) {
+    
+    .header{
+        padding: 0 100px;
+    }
+
+}
+/* =>스크린 사이즈가 1024 이하로 줄어들면 헤더의 양옆 간격을 줄임 */
+
+
+@media screen and (max-width:768px) {
+
+    .menu_wrap{
+        display: none;
+    }
+
+    .mo_menu{
+        display: block;
+    }
+
+}
+
+
+/* 모바일 사이즈로 오면 
+menu_wrap이 눈에 안보여야됨 
+mo_menu가 눈에 보여야됨 */
